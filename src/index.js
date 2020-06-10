@@ -1,17 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// imports
+import React from 'react'
+import ReactDom from 'react-dom'
+import { render } from '@testing-library/react'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// components
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Componentes funcionales
+// const App = () => {
+//     return <div></div>
+// }   
+
+// function App () {
+//     return <div></div>
+// }
+
+// Componentes de clase
+class App extends React.Component{
+    constructor(){
+        super()
+    }
+    
+
+    render() {
+        return <div> 
+                    <h1>Hola</h1>
+                    <h2>Mundo</h2>  
+               </div>
+    }
+    
+}
+
+
+// render
+ReactDom.render(<App></App>, document.querySelector('#root')
+
+)
